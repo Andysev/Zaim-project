@@ -1,0 +1,13 @@
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+.blue_squad{
+    background-color: blue;
+    font-size: 14px;
+}
+.blue_squad-bigtext{
+    font-size: 26px;
+    color: red;
+    @include f700;
+}
