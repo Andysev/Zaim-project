@@ -5,6 +5,7 @@ $bg: #263238;
 $grey: #f4f6f5;
 $yellow: #fcb322 ;
 $tomate: #ef6c00;
+$blue: #23A1ED;
 
 @mixin f300 {
     font-family: 'Roboto', sans-serif;
@@ -17,4 +18,4 @@ $tomate: #ef6c00;
 @mixin f700 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-}
+};
