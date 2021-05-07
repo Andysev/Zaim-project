@@ -22,7 +22,11 @@ gulp.task("copy-html", () => {
 });
 
 gulp.task('build-js', function(){
-  return gulp.src("./src/js/main.js")
+  return gulp.src([
+    'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
+    './src/js/jquery-3.5.1.js',
+    './src/js/main.js'
+  ])
   .pipe(gulp.dest(dist + '/js'))
   .pipe(browsersync.stream());
 	});

@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
   </head>
@@ -177,6 +178,88 @@
         </div>
       </div>
     </header>
+    <section class="currency"> 
+      <div class="container"> 
+        <div class="currency_top">
+          <div class="currency_title">Курсы валют в России</div><a class="other_currency" href="#">Все курсы валют</a>
+        </div>
+        <div class="currency_data"> 
+          <div class="currency_type"> 
+            <div class="currency_data-title">Валюта</div>
+            <div class="usd_type">USD</div>
+            <div class="eur_type">EUR </div>
+          </div>
+          <div class="currency_buy"> 
+            <div class="currency_data-title">Покупка</div>
+            <div class="usd_buy" id="up"> 77,41 </div>
+            <div class="eur_buy" id="up">91,15</div>
+          </div>
+          <div class="currency_sell"> 
+            <div class="currency_data-title">Продажа</div>
+            <div class="usd_sell" id="down">77,41</div>
+            <div class="eur_sell" id="down">91,15</div>
+          </div>
+          <div class="currency_CB"> 
+            <div class="currency_data-title">ЦБ РФ</div>
+            <div class="usd_CB" id="up">77,41</div>
+            <div class="eur_CB" id="down">91,15</div>
+          </div>
+          <div class="currency_conventer"> 
+            <div class="currency_data-title">Конвентор валют</div>
+            <div class="conventor_select">
+              <div class="select_arrowUp"></div>
+              <select>
+                <option value="">1</option>
+                <option value="">2</option>
+              </select>
+            </div>
+            <div class="conventor_select eur_select">
+              <div class="select_arrowUp-eur"></div>
+              <select>
+                <option value="">1</option>
+                <option value="">2</option>
+              </select>
+            </div>
+          </div>
+          <div class="currency_line"> </div>
+          <div class="currency_lineSecond"></div>
+        </div><a class="conventor_btn">Конвертер   </a>
+        <div class="mobile_converter"> 
+          <div class="mobile_converer-top"> 
+            <div class="converter_title">Конвертер валют</div>
+            <div class="converter_close"> <a class="closeConvert"><span class="menu-mob"></span></a></div>
+          </div>
+          <div class="mobile_converter_elements"> 
+            <div class="mobile_converter_element">
+              <div class="converter_element-title">Валюта</div>
+              <select>
+                <option value="">USD </option>
+                <option value="">EUR  </option>
+              </select>
+            </div>
+            <div class="mobile_converter_element">
+              <div class="converter_element-title">Количество</div>
+              <select>
+                <option value="">1 </option>
+                <option value="">2  </option>
+              </select>
+            </div>
+            <div class="mobile_converter_element">
+              <div class="converter_element-title">Покупка</div>
+              <select>
+                <option value="">0,83</option>
+              </select>
+            </div>
+            <div class="mobile_converter_element">
+              <div class="converter_element-title">Продажа</div>
+              <select>
+                <option value="">0,93</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
       <div class="container">
         <div class="footer_top">
@@ -231,6 +314,8 @@
         </div>
       </div>
     </footer>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

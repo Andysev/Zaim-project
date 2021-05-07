@@ -5,10 +5,7 @@
 
 //start header
 .header{
-    background-image: linear-gradient(rgba(0, 158, 226, 0.5),
-    rgba(12, 179, 181, 0.5),
-    rgba(32, 214, 107, 0.5),
-    rgba(255, 255, 255, 0));
+    background: linear-gradient(32.66deg, rgba(0, 158, 226, 0.5) 9.16%, rgba(12, 179, 181, 0.5) 31.25%, rgba(32, 214, 107, 0.5) 37.41%, rgba(255, 255, 255, 0) 54.11%);
     
 }
 .header_inner-top{
@@ -308,7 +305,414 @@ li.credit:hover{
     left: 16px;
     top: 16px;
 }
+//section USD EUR
+.currency_top{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 42px;
+    align-items: center;
+}
+.currency_title{
+    font-size: 30px;
+    line-height: 35px;
+    @include f700;
+}
+.other_currency{
+    font-size: 16px;
+    color: $blue;
+    margin-left: auto;
+    position: relative;
+    &::after{
+        position: absolute;
+        content: url(../icons/chevron-right.svg);
+    }
+}
 
+.currency_data{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27px;
+    padding-bottom: 27px;
+    position: relative;
+    // &::before{
+    //     content: url(../icons/Line.svg);
+    //     position: absolute;
+    //     top: 34px;
+    // }
+    // &::after{
+    //     content: url(../icons/Line.svg);
+    //     position: absolute;
+    //     top: 100px;
+    // }
+}
+.currency_line{
+    position: absolute;
+    border-bottom: 1px solid #E5E5E5;;
+    width: 100%;
+    top: 52px;
+}
+.currency_lineSecond{
+    position: absolute;
+    border-bottom: 1px solid #E5E5E5;;
+    width: 100%;
+    top: 116px;
+}
+.currency_type,
+.currency_buy,
+.currency_sell,
+.currency_CB,
+.currency_conventer{
+    display: flex;
+    flex-direction: column;
+}
+.usd_sell{
+    padding-left: 13px;
+    padding-top: 27px;
+}
+.usd_buy{
+    padding-top: 27px;
+    padding-left: 8px;
+}
+.usd_CB{
+    padding-left: 5px;
+    padding-top: 27px;
+}
+.usd_type{
+    padding-top: 27px;
+}
+.eur_type{
+    padding-top: 32px;
+}
+.eur_buy{
+    padding-left: 8px;
+    padding-top: 32px;
+}
+.eur_sell{
+    padding-top: 32px;
+    padding-left: 13px;
+}
+.eur_CB{
+    padding-left: 5px;
+    padding-top: 32px;
+}
+
+.currency_conventer{
+    padding-right: 8px;
+}
+.currency_data-title{
+    padding-bottom: 27px;
+}
+#up{
+    &::after{
+        content:url(../icons/currency-arrowUp.svg);
+    }
+}
+#down{
+    &::after{
+        content:url(../icons/currency-arrowDown.svg);
+    }
+}
+
+//CONVENTER
+.currency_conventer {
+    position: relative;
+}
+.select_arrowUp{
+    position: absolute;
+    left: 150px;
+    top: 65px;
+}
+.select_arrowDown{
+    position: absolute;
+    left: 150px;
+    top: 80px;
+    svg{
+        path{
+            stroke: #000;
+        }
+    }
+}
+.select_arrowUp-eur{
+    position: absolute;
+    left: 150px;
+    top: 123px;
+}
+.select_arrowDown-eur{
+    position: absolute;
+    left: 150px;
+    top: 138px;
+    svg{
+        path{
+            stroke: #000;
+        }
+    }
+}
+.select_arrowChek{
+        svg{
+            path{
+                stroke: #23A1ED;
+            }
+        }
+}
+.conventor_select{
+    padding-top: 17px;
+    select{
+        border-radius: 10px;
+        height: 40px;
+        width: 176px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        background-color: rgba(238, 240, 245, 0.5);
+        outline: 0;    
+     }
+}
+.eur_select{
+    padding-top: 16px;
+}
+//mobile converter
+.mobile_converter{
+    display: none;
+}
+.mobile_converter-active{
+    display: flex;
+    flex-direction: column;
+}
+.mobile_btn-active{
+    display: none;
+}
+.mobile_converer-top {
+    display: flex;
+    justify-content: space-between;
+}
+.converter_title{
+    margin-top: 15px;
+    font-size: 20px;
+    @include f700
+}
+.closeConvert{
+    background-color: #fff;
+    border: none;
+}
+.conventor_btn{
+    display: none;
+}
+.closeConvert{
+    .menu-mob{
+        opacity: 0;
+    }
+ &::before{
+    width: 15px;
+    transform: translateY(6px) rotate(135deg);
+    content: "";
+    height: 1px;
+    background-color: #000000;
+    display: block;
+    margin-bottom: 4px;
+    transition: transform 0.3s;
+ }
+ &::after{
+    width: 15px;
+    transform: translateY(-6px) rotate(-135deg);
+    content: "";
+    height: 1px;
+    background-color: #000000;
+    display: block;
+    margin-bottom: 4px;
+    transition: transform 0.3s;
+ }
+}
+.mobile_converter_elements{
+    display: flex;
+    flex-wrap: wrap;
+}
+.mobile_converter_element{
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+.converter_element-title{
+    font-size: 13px;
+    color: rgba(83, 83, 83, 1);
+}
+.select_arrowUp_mobile{
+    position: absolute;
+    left: 150px;
+    top: 4px;
+}
+.select_arrowDown_mobile{
+    position: absolute;
+    left: 150px;
+    top: 19px;
+    svg{
+        path{
+            stroke: #000;
+        }
+    }
+}
+.select_arrowUp-eur{
+    position: absolute;
+    left: 150px;
+    top: 123px;
+}
+.select_arrowDown-eur{
+    position: absolute;
+    left: 150px;
+    top: 138px;
+    svg{
+        path{
+            stroke: #000;
+        }
+    }
+}
+.select_arrowChek{
+        svg{
+            path{
+                stroke: #23A1ED;
+            }
+        }
+}
+.conventor_select_mobile{
+    padding-top: 5px;
+    position: relative;
+    select{
+        border-radius: 10px;
+        height: 40px;
+        width: 176px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        background-color: rgba(238, 240, 245, 0.5);
+        outline: 0;    
+     }
+     .optionblock{
+         position: relative;
+     }
+     option {
+         background-color: #fff;
+         position: absolute;
+         top: 20px;
+     }
+}
+.mobile_converter_element,
+.conventor_select{
+  
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    label{
+        min-width: 175px;
+        padding-right: 15px;
+        padding-top: 5px;
+        color: #444;
+        span{
+            color: $green;
+        }
+        &::placeholder{
+            color: #707070;
+        }
+    }
+    select{
+        display: none;
+    }
+    input[type="file"]{
+        display: none;
+    }
+    input,
+    textarea{
+        width: 100%;
+        display: block;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0 18px;
+    }
+    textarea{
+        resize: none;
+        height: 150px;
+        padding: 8px 18px;
+    }
+    .jq-file__browse{
+       
+        display: block;
+        top: 5px;
+        right: auto;
+        left: 9px;
+        font-size: 12px;
+        line-height: 26px;
+        padding: 0 12px;
+        border-left: 1px solid #d7d7d7;
+        border: 1px solid #d7d7d7;
+        border-radius:0px;
+        background: #fff;
+        box-shadow:none;
+        text-shadow: none;
+        color: #444;
+    }
+    .jq-file{
+        width: 100%;
+        border-radius: 0px;
+        box-shadow: none;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+    }
+    .jq-file__name{
+        margin-left: 120px;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        border-bottom-color: transparent;
+        border-radius: 0px;
+        padding: 0 18px;
+        height: 40px;
+        width: 100%;
+        color: #707070;
+        line-height: 40px;
+        font-size: 12px;
+    }
+    .jq-selectbox{
+        width: 100%;
+    }
+    .jq-selectbox__select{
+        height: 40px;
+        padding: 0 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 10px;
+        background: #f9f9f9;
+        box-shadow: none;
+        text-shadow: none;
+        color: #707070;
+        font-family: 'Roboto-Regular', sans-serif;
+        line-height: 40px;
+    }
+    
+    .jq-selectbox__trigger-arrow{
+        border: none;
+        top: 0;
+        right: 20px;
+        line-height: 40px;
+        font-size: 15px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: url(../icons/Up.svg);
+            left: 23px;
+            top: 5px;
+        }
+    }
+    .jq-selectbox__trigger{
+        border-left: none;
+    }
+    .jq-selectbox__dropdown{
+        top: -4px;
+    }
+}
+//end mobile converter
+//Conventer
+//End section USD EUR
 
 //start footer
 .footer{

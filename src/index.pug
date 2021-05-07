@@ -2,8 +2,10 @@ doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/jquery.formstyler.theme.css")
+        link(rel="stylesheet", href="css/jquery.formstyler.css")
         link(rel="stylesheet", href="css/style.css")
         title Document
     body 
@@ -155,6 +157,70 @@ html(lang="en")
                             .header_block-text РКО
                             .header_block-icon
                                 img(src="icons/file-text.svg", alt="")
+        section.currency 
+            .container 
+                .currency_top
+                    .currency_title Курсы валют в России
+                    a(href="#").other_currency Все курсы валют
+                .currency_data 
+                    .currency_type 
+                        div.currency_data-title Валюта
+                        div.usd_type USD
+                        div.eur_type EUR 
+                    .currency_buy 
+                        div.currency_data-title Покупка
+                        div.usd_buy(id="up")  77,41 
+                        div.eur_buy(id="up") 91,15
+                    .currency_sell 
+                        div.currency_data-title Продажа
+                        div.usd_sell(id="down") 77,41
+                        div.eur_sell(id="down") 91,15
+                    .currency_CB 
+                        div.currency_data-title ЦБ РФ
+                        div.usd_CB(id="up") 77,41
+                        div.eur_CB(id="down") 91,15
+                    .currency_conventer 
+                        div.currency_data-title Конвентор валют
+                        div.conventor_select
+                            .select_arrowUp
+                            select
+                                option(value="") 1
+                                option(value="") 2
+                        div.conventor_select.eur_select
+                            .select_arrowUp-eur
+                            select
+                                option(value="") 1
+                                option(value="") 2
+                    .currency_line 
+                    .currency_lineSecond
+                a.conventor_btn Конвертер   
+                .mobile_converter 
+                     .mobile_converer-top 
+                        .converter_title Конвертер валют
+                        .converter_close 
+                            a.closeConvert
+                                span.menu-mob
+                     .mobile_converter_elements 
+                        .mobile_converter_element
+                            .converter_element-title Валюта
+                            select
+                                option(value="") USD 
+                                option(value="") EUR  
+                        .mobile_converter_element
+                            .converter_element-title Количество
+                            select
+                                option(value="") 1 
+                                option(value="") 2  
+                        .mobile_converter_element
+                            .converter_element-title Покупка
+                            select
+                                option(value="") 0,83
+                        .mobile_converter_element
+                            .converter_element-title Продажа
+                            select
+                                option(value="") 0,93
+
+             
         footer.footer
             .container
                 .footer_top
@@ -243,6 +309,7 @@ html(lang="en")
                         a.confiditial_politics(href="#") Политика конфиденциальности,
                         a.user_agreement(href="#") Пользовательское соглашение
                     .footer_dealContact ИП Булатов Р.О. ИНН: 423082922740. ОГРНИП: 318420500081301. Содержание сайта не является рекомендацией или офертой, вся информация носит ознакомительный характер. При использовании материалов гиперссылка на Займ.me обязательна.  
-
+        script(src="js/jquery-3.5.1.js")
+        script(src="js/jquery.formstyler.min.js")
         script(src="js/main.js")
                             
