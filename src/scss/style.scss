@@ -595,6 +595,20 @@ li.credit:hover{
          top: 20px;
      }
 }
+.jq-selectbox__trigger-arrow{
+    border: none;
+    top: 0;
+    right: 20px;
+    line-height: 40px;
+    font-size: 15px;
+    position: relative;
+    &::before{
+        position: absolute;
+        content: url(../icons/Up.svg);
+        left: 23px;
+        top: 5px;
+    }
+}
 .mobile_converter_element,
 .conventor_select{
   
@@ -713,7 +727,127 @@ li.credit:hover{
 //end mobile converter
 //Conventer
 //End section USD EUR
+//Best Offers
+.bestOffer{
+    background-color: #E5E5E5;
+}
+.bestOffer_top{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 42px;
+    align-items: center;
+}
+.bestOffer_title{
+    font-size: 30px;
+    line-height: 35px;
+    @include f700;
+}
+.otherOffers{
+    font-size: 16px;
+    color: $blue;
+    margin-left: auto;
+    position: relative;
+    &::after{
+        position: absolute;
+        content: url(../icons/chevron-right.svg);
+    }
+}
+.offers_table{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+  
+}
+.table-line{
+   background-color: #fff;
+   margin-top: -1px;
+   height: 1px;
+}
+.offer_tab-title{
+    margin-right: 60px;
+    padding-top: 28px;
+    padding-bottom: 38px;
+    color: #8A8A8A;
+}
+.table-active{
+    color: #000;
+    position: relative;
+    border-bottom: 3px solid $blue;
+}
 
+//slider
+.slider,
+.slider2,
+.slider3{
+    visibility: hidden;
+}
+
+.tab-active {
+    visibility:inherit;
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto 0;
+    user-select: none;
+    touch-action: pan-y;
+  }
+  .slider img {
+    poiner-events: none;
+  }
+  
+  .slider-list {
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+  }
+   
+  .slider-list.grab {
+    cursor: grab;
+  }
+  
+  .slider-list.grabbing{
+    cursor: grabbing;
+  }
+  
+  .slider-track,
+  .slider-track2 {
+    display: flex;
+  }
+  
+  .slide {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+  }
+  
+  .slider-arrows {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .next,
+  .prev {
+    background: none;
+    border: none;
+    margin: 0 10px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .next.disabled,
+  .prev.disabled {
+    opacity: .25;
+    pointer-events: none;
+  }
+//end slider
+
+//End Best Offers
 //start footer
 .footer{
     background-color: #EBEDF3;
