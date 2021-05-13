@@ -25,6 +25,24 @@ function menuHeaderDrop() {
 }
 menuHeaderDrop();
 
+function locationMob(){
+  const location = document.querySelector('.header_location'),
+        locationMob = document.querySelector('.mobile_header_location'),
+        closeBtn  = document.querySelector('.mobile_location-btn'),
+        headerMobile = document.querySelector('.header_menu-mob');
+
+        location.addEventListener('click', (event) => {
+        locationMob.classList.toggle('mobile_header_location-active');
+        
+      });
+        closeBtn.addEventListener('click', (event) => {
+          
+          locationMob.classList.remove('mobile_header_location-active');
+
+      });
+}
+locationMob();
+
 function mobMenuDrop() {
     const mobDropZaim = document.querySelector('.mobDropZaim');
     const mobDropCredit = document.querySelector('.mobDropCredit');
@@ -871,6 +889,7 @@ function otzivSlider() {
   arrows = slider.querySelector('.slider-arrows'),
   prev = arrows.children[0],
   next = arrows.children[1],
+  otzivArrows = document.querySelector('.otziv-arrows'),
   slideWidth = slides[0].offsetWidth,
   slideIndex = 0,
   posInit = 0,
@@ -1036,7 +1055,7 @@ sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
 slider.addEventListener('touchstart', swipeStart);
 slider.addEventListener('mousedown', swipeStart);
 
-arrows.addEventListener('click', function() {
+otzivArrows.addEventListener('click', function() {
   let target = event.target;
 
   if (target.classList.contains('next')) {
@@ -1051,6 +1070,10 @@ arrows.addEventListener('click', function() {
 });
 }
 otzivSlider();
+
+
+
+
 
 (function($) {
     $(function() {

@@ -28,8 +28,47 @@ html(lang="en")
                     .header_location 
                         a.location(href="#") Россия
                         a.map-pin(href="#") <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5 8.33331C17.5 14.1666 10 19.1666 10 19.1666C10 19.1666 2.5 14.1666 2.5 8.33331C2.5 6.34419 3.29018 4.43653 4.6967 3.03001C6.10322 1.62349 8.01088 0.833313 10 0.833313C11.9891 0.833313 13.8968 1.62349 15.3033 3.03001C16.7098 4.43653 17.5 6.34419 17.5 8.33331Z" stroke="#535353" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 10.8333C11.3807 10.8333 12.5 9.71403 12.5 8.33331C12.5 6.9526 11.3807 5.83331 10 5.83331C8.61929 5.83331 7.5 6.9526 7.5 8.33331C7.5 9.71403 8.61929 10.8333 10 10.8333Z" stroke="#535353" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        button.header_menu-mob 
-                            span.menu-mob
+                    button.header_menu-mob 
+                        span.menu-mob
+                    .mobile_header_location
+                        .mobile_location-top 
+                            .location_title Поиск города
+                            .mobile_location-btn  
+                        .location_search 
+                            input(placeholder="Введите название города") 
+                        .location_links 
+                            a.location_link(href="#") Барнаул 
+                            a.location_link(href="#") Владивосток 
+                            a.location_link(href="#") Волгоград 
+                            a.location_link(href="#") Воронеж 
+                            a.location_link(href="#") Екатеринбург 
+                            a.location_link(href="#") Ижевск 
+                            a.location_link(href="#") Иркутск 
+                            a.location_link(href="#") Казань 
+                            a.location_link(href="#") Калуга 
+                            a.location_link(href="#") Кемерово 
+                            a.location_link(href="#") Краснодар 
+                            a.location_link(href="#") Красноярск 
+                            a.location_link(href="#") Москва 
+                            a.location_link(href="#") Нижний Новгород 
+                            a.location_link(href="#") Новокузнецк 
+                            a.location_link(href="#") Новосибирск 
+                            a.location_link(href="#") Омск 
+                            a.location_link(href="#") Оренбург 
+                            a.location_link(href="#") Пенза 
+                            a.location_link(href="#") Ростов 
+                            a.location_link(href="#") Ростов-на-Дону 
+                            a.location_link(href="#") Самара 
+                            a.location_link(href="#") Санкт-Петербург 
+                            a.location_link(href="#") Саратов 
+                            a.location_link(href="#") Тольятти 
+                            a.location_link(href="#") Томск 
+                            a.location_link(href="#") Тюмень 
+                            a.location_link(href="#") Ульяновск 
+                            a.location_link(href="#") Уфа
+                            a.location_link(href="#") Хабаровск 
+                            a.location_link(href="#") Челябинск 
+                            a.location_link(href="#") Ярославль  
                 .header_inner-two 
                     nav.menu-wto
                         ul.menu_list-two 
@@ -457,7 +496,15 @@ html(lang="en")
                             button.next &rarr;   
         section.otziv 
             .container.otziv 
-                .otziv-title Отзывы о МФО Москвы 
+                .otziv_top 
+                    .otziv-title Отзывы о МФО Москвы 
+                    .otziv-arrows 
+                        button.prev <svg width="15" height="18" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.643 12.5616L1 6.78078L8.643 1" stroke="#23A1ED" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        button.next <svg width="15" height="18" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.29822 12.5616L8.94122 6.78078L1.29822 1" stroke="#23A1ED" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg> 
                 .otziv_slider 
                     .slider-list 
                         .slider-track
